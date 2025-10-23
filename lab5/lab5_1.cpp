@@ -23,7 +23,7 @@ struct Point {
 };
 
 inline bool operator==(const Point& a, const Point& b) { return a.Equals(b); }
-inline bool operator!=(const Point& a, const Point& b) { return !(a == b); }
+inline bool operator!=(const Point& a, const Point& b) { return !(a.Equals(b)); }
 inline std::ostream& operator<<(std::ostream& os, const Point& p) {
     return os << '(' << p.x << ", " << p.y << ')';
 }
@@ -45,3 +45,4 @@ int main() {
 
     return 0;
 }
+
